@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecjtu.zwh.mapper.PictureMapper">
+
+    <!-- List<Picture> getAllPicture() -->
+    <select id="getAllPicture" resultType="com.ecjtu.zwh.entity.Picture">
+        select * from picture
+    </select>
+
+    <!-- Picture getPictureByPicId(Integer picId) -->
+    <select id="getPictureByPicId" resultType="com.ecjtu.zwh.entity.Picture">
+        select * from picture where pic_id=#{picId}
+    </select>
+
+    <!-- List<Picture> getPictureByTypeId(Integer typeId) -->
+    <select id="getPictureByTypeId" resultType="com.ecjtu.zwh.entity.Picture">
+        select * from picture where type_id=#{typeId}
+    </select>
+
+    <!-- List<Picture> getPictureByUserId(Integer userId) -->
+    <select id="getPictureByUserId" resultType="com.ecjtu.zwh.entity.Picture">
+        select * from picture where user_id=#{userId}
+    </select>
+
+</mapper>

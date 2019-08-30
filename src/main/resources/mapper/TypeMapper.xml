@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecjtu.zwh.mapper.TypeMapper">
+
+    <!-- List<Type> getAllType() -->
+    <select id="getAllType" resultType="com.ecjtu.zwh.entity.Type">
+        select * from type
+    </select>
+
+    <!-- List<String> getAllTypeName() -->
+    <select id="getAllTypeName" resultType="java.lang.String">
+        select type_name from type
+    </select>
+
+    <!-- String getTypeNameByTypeId(Integer typeId) -->
+    <select id="getTypeNameByTypeId" resultType="java.lang.String">
+        select type_name from type where type_id=#{typeId}
+    </select>
+
+</mapper>

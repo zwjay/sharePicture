@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecjtu.zwh.mapper.UserMapper">
+
+    <!-- List<User> getAllUser() -->
+    <select id="getAllUser" resultType="com.ecjtu.zwh.entity.User">
+        select * from user
+    </select>
+
+    <!-- User getUserById(Integer userId) -->
+    <select id="getUserById" resultType="com.ecjtu.zwh.entity.User">
+        select * from user where user_id=#{userId}
+    </select>
+
+    <!-- User getUserByUserName(String userName) -->
+    <select id="getUserByUserName" resultType="com.ecjtu.zwh.entity.User">
+        select * from user where user_name=#{userName}
+    </select>
+
+    <!-- User getUserByEmail(String email) -->
+    <select id="getUserByEmail" resultType="com.ecjtu.zwh.entity.User">
+        select * from user where email=#{email}
+    </select>
+
+    <!-- int updateUser(User user) -->
+    <update id="updateUser" parameterType="com.ecjtu.zwh.entity.User">
+        update user set user_name=#{userName}, password=#{password}, email=#{email} where user_id=#{userId}
+    </update>
+
+    <!-- int deleteUserById(Integer userId) -->
+    <delete id="deleteUserById" parameterType="java.lang.Integer">
+        delete from user where user_id=#{userId}
+    </delete>
+
+    <!-- int saveUser(User user) -->
+    <insert id="saveUser" parameterType="com.ecjtu.zwh.entity.User">
+        insert into user (user_name, password, email) values (#{userName}, #{password}, #{email})
+    </insert>
+
+    <!-- void deleteBatch(@Param("userIds") List<Integer> userIds) -->
+    <delete id="deleteBatch">
+        delete from user
+        <foreach collection="userIds" item="userId" open="where id in (" separator="," close=")">
+            #{userId}
+        </foreach>
+    </delete>
+
+</mapper>
