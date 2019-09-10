@@ -26,7 +26,7 @@
 
     <!-- int updateUser(User user) -->
     <update id="updateUser" parameterType="com.ecjtu.zwh.entity.User">
-        update user set user_name=#{userName}, password=#{password}, email=#{email} where user_id=#{userId}
+        update user set user_name=#{userName}, password=#{password}, email=#{email}, user_head_url=#{userHeadUrl} where user_id=#{userId}
     </update>
 
     <!-- int deleteUserById(Integer userId) -->

@@ -72,7 +72,7 @@ hr.line { margin: 15px auto; padding: 0; max-width: 60px;border: 0; border-top: 
 /* --Page-- */
 body.index-page {}
 body.sub-page{}
-body.sub-page header .main-header{height: 300px;background: #E1EAE3 url(/pic/images/sup_showcase_bg.png) center center;background-size: cover;}
+body.sub-page header .main-header{height: 300px;background: #E1EAE3 url(/pic/img_sharePic/sup_showcase_bg.png) center center;background-size: cover;}
 
 body .wrap-body{position: relative;}
 body .wrap-body #page-top-btn{position: fixed;right: 40px;bottom: 40px;z-index: 999;}
@@ -81,7 +81,7 @@ body .wrap-body #page-top-btn{position: fixed;right: 40px;bottom: 40px;z-index: 
 /* ---------------------------------------------------------------------------- */
 header .main-header{position: relative;height: 100%;width: 100%;background: #F5F5F3;}
 
-header .hero-background{background: url(/pic/images/showcase_bg.jpg) center center;background-size: cover;width: 100%;height: 550px;position: relative;}
+header .hero-background{background: url(/pic/img_sharePic/showcase_bg.jpg) center center;background-size: cover;width: 100%;height: 550px;position: relative;}
 
 /* Header Styles */
 .header-text {transition: opacity 1s ease 0s, transform 1s ease 0s;z-index: 1;opacity: 1;}
@@ -174,7 +174,7 @@ body.sub-page #menu {padding: 10px 0;}
 .box-content .heading h2{color: #2b2d3f;font-size: 41px;text-transform: uppercase;font-weight: 800;letter-spacing: 8px}
 
 .box-content.box-style-1{background: #F0F6F6;}
-.box-content.box-style-2{background: #F0F6F6 url(/pic/images/bg2.png) 100% 50% no-repeat;background-size: cover;}
+.box-content.box-style-2{background: #F0F6F6 url(/pic/img_sharePic/bg2.png) 100% 50% no-repeat;background-size: cover;}
 
 @media all and (max-width: 767px){
     .box-content {padding: 90px 0;}
@@ -381,3 +381,26 @@ footer .copyright{padding: 15px 0;font-size: 16px;}
 .link li:after{content: "-";padding: 0 10px;}
 .link li:last-child:after{content:'';padding:0px;display:none}
 ul.link li{padding: 0;margin: 0;}
+
+#user #user-left-box #user-img span {font-size: larger;}
+#user #user-left-box #user-img .username_div {margin-top: 10px;}
+#user #user-left-box #user-img a {text-decoration: none;}
+#user #user-left-box #user-img a:hover {color: #cb8e5f;}
+#user #user-left-box #user-follow #user_follow_div {margin-right: 0px;}
+#user #user-left-box #user-follow #user_fans_div {margin-left: 0px; border-left: solid 2px #eeeeee}
+#user #user-left-box #user-follow .follow_biv:hover {cursor: pointer; color: #cb8e5f;}
+#user #user-left-box #user_btn .user_btn {margin-top: 15px;}
+
+#user #user-right-box h4 {margin: 0px 0px 25px 25px;}
+#user #user-right-box h4#picPart_head {display: inline-block;}
+#user #user-right-box .edit_btn {float: right; margin-right: 25px;}
+#user #user-right-box .othUserName {font-size: larger;}
+
+#setting #user-img span {font-size: x-large;}
+#setting #user-img #userName_div {margin: 15px auto}
+#setting #setting-right-box {padding-top: 20px}
+#setting #setting-right-box .changeInfo_div {margin-bottom: 15px}
+#setting #setting-right-box .changeInfo_name {font-size: x-large; font-weight: bolder}
+#setting #setting-right-box .changeInfo_btn {float: right}
+
+

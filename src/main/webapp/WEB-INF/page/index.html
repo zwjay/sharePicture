@@ -44,22 +44,19 @@
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<a class="navbar-brand" th:href="@{index}">
-							<img src="/pic/images/logo.png" class="img-responsive">
+							<img src="/pic/img_sharePic/logo.png" class="img-responsive">
 						</a>
 						<button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
 					</div>
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a th:href="@{index}">Home</a></li>
-							<li><a th:href="@{single}">About Us</a></li>
-							<li><a th:href="@{archive}">Blog</a></li>
-							<li><a th:href="@{contact}">Contact</a></li>
+							<li class="active"><a th:href="@{index}"><span class="glyphicon glyphicon-home"></span> 首页</a></a></li>
 							<li th:if="${session.loginUser}==null" id="userBtn_li">
                                 <a class="btn btn-default" href="login.html" th:href="@{login}" role="button">登录</a>
 								<a class="btn btn-default" href="registered.html" th:href="@{registered}" role="button">注册</a>
 							</li>
 							<li th:if="${session.loginUser}!=null" id="userInfo_li">
-								<a th:href="@{user/{userId}(userId=${session.loginUser.getUserId()})}" id="img"><img th:src="@{../pic/images/{getUserHeadUrl}(getUserHeadUrl=${session.loginUser.getUserHeadUrl()})}" class="img-responsive" alt=""></a>
+								<a th:href="@{user/{userId}(userId=${session.loginUser.getUserId()})}" id="img"><img th:src="@{../pic/img_sharePic/userHead/{getUserHeadUrl}(getUserHeadUrl=${session.loginUser.getUserHeadUrl()})}" class="img-responsive" alt=""></a>
 								<a th:href="@{user/{userId}(userId=${session.loginUser.getUserId()})}" id="userName"><span th:text="${session.loginUser.getUserName()}"></span></a>
 							</li>
 						</ul>
@@ -97,13 +94,14 @@
 				<div class="isotopeContainer">
 					<div th:each="picture:${pictures}" class="col-lg-4 col-sm-4 col-md-6 isotopeSelector" th:attrappend="class=${' type'+picture.typeId}">
 						<div class="portfolio-box zoom-effect">
-							<img th:src="@{../pic/images/{pictureUrl}(pictureUrl=${picture.picUrl})}" class="img-responsive" alt="">
+							<img th:src="@{../pic/img_sharePic/img/{pictureUrl}(pictureUrl=${picture.picUrl})}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-caption-content">
 									<div class="project-social">
 										<ul class="list-inline">
-											<li><a href="single.html"><i class="fa fa-link"></i></a></li>
-											<li><a th:href="@{../pic/images/{pictureUrl}(pictureUrl=${picture.picUrl})}" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><i class="fa fa-search"></i></a></li>
+											<li><a th:href="@{../pic/img_sharePic/img/{pictureUrl}(pictureUrl=${picture.picUrl})}" download><i class="fa fa-download"></i></a></li>
+											<li><a th:href="@{../pic/img_sharePic/img/{pictureUrl}(pictureUrl=${picture.picUrl})}" data-lightbox="example-set"><i class="fa fa-search"></i></a></li>
+											<li><a th:href="@{user/{userId}(userId=${picture.userId})}"><i class="fa fa-user"></i></a></li>
 										</ul>
 									</div>
 								</div>
@@ -111,45 +109,47 @@
 						</div>
 					</div>
 				</div>
-				<div class="text-center"><button class="btn btn-skin" id="isotopeShowMore" >Show More</button></div>
-			</div>
-		</section>
-
-		<!-- ////////////Content Box 02 -->
-		<section class="box-content box-2 box-style-1">
-			<div class="container">
-				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Our Story</h2>
-					<hr class="line">
-
-				</div>
-				<div class="content">
-					<div class="row">
-						<div class="col-sm-8 col-sm-offset-2">
-							<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
-							<p>Lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum.</p>
-						</div>
-					</div>
+				<div class="text-center">
+					<button class="btn btn-skin" id="isotopeShowMore" >加载更多</button>
 				</div>
 			</div>
 		</section>
 
-		<!-- ////////////Content Box 03 -->
-		<section class="box-content box-3 box-style-2">
-			<div class="container">
-				<div class="content">
-					<div class="row">
-						<div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay=".1.15s" data-wow-duration="1.3s">
-							<img src="/pic/images/11.jpg" alt="">
-						</div>
-						<div class="col-md-4 col-sm-6 wow fadeInRight" data-wow-delay=".1s" data-wow-duration="1s">
-							<a href="single.html" class="btn btn-skin">Read The Blog</a>
-							<img src="/pic/images/9.jpg" alt="" class="hidden-xs" style="margin: 0 0 0 -100px;">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<!--		&lt;!&ndash; ////////////Content Box 02 &ndash;&gt;-->
+<!--		<section class="box-content box-2 box-style-1">-->
+<!--			<div class="container">-->
+<!--				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">-->
+<!--					<h2>Our Story</h2>-->
+<!--					<hr class="line">-->
+
+<!--				</div>-->
+<!--				<div class="content">-->
+<!--					<div class="row">-->
+<!--						<div class="col-sm-8 col-sm-offset-2">-->
+<!--							<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>-->
+<!--							<p>Lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum.</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
+
+<!--		&lt;!&ndash; ////////////Content Box 03 &ndash;&gt;-->
+<!--		<section class="box-content box-3 box-style-2">-->
+<!--			<div class="container">-->
+<!--				<div class="content">-->
+<!--					<div class="row">-->
+<!--						<div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay=".1.15s" data-wow-duration="1.3s">-->
+<!--							<img src="/pic/img_sharePic/11.jpg" alt="">-->
+<!--						</div>-->
+<!--						<div class="col-md-4 col-sm-6 wow fadeInRight" data-wow-delay=".1s" data-wow-duration="1s">-->
+<!--							<a href="single.html" class="btn btn-skin">Read The Blog</a>-->
+<!--							<img src="/pic/img_sharePic/9.jpg" alt="" class="hidden-xs" style="margin: 0 0 0 -100px;">-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</section>-->
 
 	</section>
 

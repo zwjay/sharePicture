@@ -7,8 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a66d7ba-a217-4474-ba18-490fd0c9a7ff" name="Default Changelist" comment="第二次提交，完成登录注册和主页的基本功能">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8aa9b1c4-8001-46d9-95f5-c0472cd23f7b.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Album.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Collection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Follow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/AlbumMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/CollectionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/FollowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/AlbumService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/CollectionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/FollowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/AlbumServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/CollectionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/FollowServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/vo/FollowerVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AlbumMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CollectionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/FollowMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/ajaxfileupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/checkChangeInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/imagesloaded.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/masonry.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/uploadPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/userPageAjax.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/applicationContext-dao.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/applicationContext-service.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/applicationContext-tx.xml" afterDir="false" />
@@ -16,26 +38,71 @@
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/controller/ContentServlet.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/controller/FormServlet.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/controller/UserServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/entity/Album.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/entity/Collection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/entity/Follow.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/entity/Picture.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/entity/Type.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/mapper/AlbumMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/mapper/CollectionMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/mapper/FollowMapper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/mapper/PictureMapper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/mapper/TypeMapper.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/mapper/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/AlbumService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/CollectionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/FollowService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/PictureService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/TypeService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/impl/AlbumServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/impl/CollectionServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/impl/FollowServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/impl/PictureServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/impl/TypeServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/service/impl/UserServiceImpl.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/util/Msg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/ecjtu/zwh/vo/FollowerVO.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/config.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/AlbumMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/CollectionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/FollowMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/mapper/PictureMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/mapper/TypeMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8aa9b1c4-8001-46d9-95f5-c0472cd23f7b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8aa9b1c4-8001-46d9-95f5-c0472cd23f7b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/CheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/CheckServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/ContentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/ContentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/FormServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/FormServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Picture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/PictureMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/PictureMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/PictureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/PictureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/PictureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/PictureServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PictureMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PictureMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/registered.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/registered.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/single.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/lightbox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/lightbox.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/checkForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/checkForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/isotope.pkgd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/isotope.pkgd.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,71 +158,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="950">
+              <caret line="179" selection-start-line="179" selection-end-line="179" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="42" column="57" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="57" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/user.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/userPageAjax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PictureMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/PictureServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="5529">
+              <caret line="291" column="81" selection-start-line="291" selection-start-column="81" selection-end-line="291" selection-end-column="81" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/ContentServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/UserServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1876">
+              <caret line="156" selection-start-line="156" selection-end-line="156" />
             </state>
           </provider>
         </entry>
@@ -166,6 +202,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -182,6 +219,14 @@
       <find>lb-image</find>
       <find>5</find>
       <find>items</find>
+      <find>isotopeShowMore</find>
+      <find>getUserId</find>
+      <find>id</find>
+      <find>checkIsFollow_fl</find>
+      <find>images</find>
+      <find>project-social</find>
+      <find>portfolio-box-caption</find>
+      <find>已关注</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,47 +235,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/archive.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/css/lightbox.min.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/springmvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/single.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/CheckServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/checkFrom.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/css/lightbox.min.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/FormServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/test.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/PictureMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/PictureServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Type.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/TypeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/TypeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/TypeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/ContentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Picture.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/PictureService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/PictureMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TypeMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/lightbox.min.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/isotope.min.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/userAjax.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/follow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/vo/FollowerVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Follow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/FollowMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/FollowMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/FollowService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/FollowServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/checkIsFollow_fl.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/isotope.pkgd.min.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/checkForm.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/CheckServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/userPageIsotope.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/main.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/ContentServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/css/lightbox.min.css" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/springmvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Collection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/CollectionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/AlbumMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/AlbumService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/AlbumServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/AlbumMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Album.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CollectionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/uploadPage.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/upload.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Picture.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/registered.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/UserServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/setting.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/user.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/ajaxfileupload.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/checkChangeInfo.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/PictureService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/FormServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/PictureServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/PictureMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/PictureMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/userPageAjax.js" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -266,10 +329,10 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="22" />
-    <option name="y" value="-17" />
+    <option name="x" value="-44" />
+    <option name="y" value="-19" />
     <option name="width" value="1785" />
-    <option name="height" value="1074" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -277,7 +340,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -354,7 +417,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zwh" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharePicture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharePicture" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zwh" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharePicture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharePicture" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zwh" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sharePicture" type="b2602c69:ProjectViewProjectNode" />
@@ -407,22 +489,23 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -430,9 +513,9 @@
       <recent name="G:\IdeaWorkspace\sharePicture\src\main\webapp\WEB-INF" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\IdeaWorkspace\sharePicture\src\main\webapp\static\images" />
-      <recent name="G:\IdeaWorkspace\sharePicture\src\main\webapp\static\css" />
       <recent name="G:\IdeaWorkspace\sharePicture\src\main\webapp\static\js" />
+      <recent name="G:\IdeaWorkspace\sharePicture\src\main\webapp\static\css" />
+      <recent name="G:\IdeaWorkspace\sharePicture\src\main\webapp\static\images" />
       <recent name="G:\IdeaWorkspace\sharePicture\src\main\webapp\static" />
       <recent name="G:\IdeaWorkspace\sharePicture\src\main\java\com\ecjtu\zwh" />
     </key>
@@ -551,7 +634,12 @@
       <workItem from="1566952853124" duration="39931000" />
       <workItem from="1567039039574" duration="6718000" />
       <workItem from="1567082886471" duration="13368000" />
-      <workItem from="1567126429673" duration="23107000" />
+      <workItem from="1567126429673" duration="27962000" />
+      <workItem from="1567328552507" duration="181000" />
+      <workItem from="1567329372768" duration="27847000" />
+      <workItem from="1567384551766" duration="53799000" />
+      <workItem from="1567514494335" duration="137262000" />
+      <workItem from="1567931964787" duration="88935000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交：上传项目目录结构">
       <created>1565950755523</created>
@@ -567,11 +655,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567158186625</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="第二次提交，完成登录注册和主页的基本功能">
+      <created>1567159683878</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567159683878</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183699000" />
+    <option name="totallyTimeSpent" value="496578000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -584,9 +679,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1930295" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17225201" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -596,14 +690,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.17705382" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.32719547" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286119" />
@@ -622,7 +716,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19906166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19839142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -632,14 +726,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3286119" />
@@ -707,180 +801,27 @@
     <option name="LAST_COMMIT_MESSAGE" value="第二次提交，完成登录注册和主页的基本功能" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/fonts/glyphicons-halflings-regular.ttf">
-      <provider selected="true" editor-type-id="fontseditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/font-awesome-animation.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/html5shiv.js">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="415">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/bootstrapValidator.min.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/util/Msg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/bootstrapValidator.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/font-awesome-animation.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/sharePicture/static/css/lightbox.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/images/prev.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/lightbox.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="118" column="25" lean-forward="true" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
-          <folding>
-            <element signature="e#1487#1574#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/checkForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/archive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="927">
-          <caret line="129" column="67" selection-start-line="129" selection-start-column="67" selection-end-line="129" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/test.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/respond.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/isotope.pkgd.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/jquery.localScroll.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/CheckServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/FormServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="73" lean-forward="true" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/TypeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="680">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#816#817#0" expanded="true" />
@@ -892,88 +833,196 @@
             <element signature="e#1148#1149#0" expanded="true" />
             <element signature="e#1203#1204#0" expanded="true" />
             <element signature="e#1257#1258#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1420#1421#0" expanded="true" />
-            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/CollectionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="65" lean-forward="true" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/CollectionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/CollectionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/AlbumServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/AlbumService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="52" lean-forward="true" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/AlbumMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        <state relative-caret-position="228">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/TypeMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/PictureMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="55">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/PictureService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="159">
+          <caret line="1208" selection-start-line="1208" selection-end-line="1208" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/TypeService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AlbumMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/sharePicture/static/js/main.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CollectionMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1083" />
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/SmoothScroll.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-dao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="15" />
+        <state relative-caret-position="-285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="76" column="58" lean-forward="true" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1422" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/archive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-801" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/lightbox.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="122" column="89" selection-start-line="122" selection-start-column="81" selection-end-line="122" selection-end-column="89" />
+        <state relative-caret-position="304">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/wow.min.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/isotope.pkgd.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8949">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/isotope.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -982,131 +1031,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/isotope.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="505" column="28" selection-start-line="505" selection-start-column="23" selection-end-line="505" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TypeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="52" lean-forward="true" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-627" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/masonry.pkgd.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/registered.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="55" column="72" lean-forward="true" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
+        <state relative-caret-position="323">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding>
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Picture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1298#1299#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="e#1518#1519#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#1708#1709#0" expanded="true" />
-            <element signature="e#1748#1749#0" expanded="true" />
-            <element signature="e#1780#1781#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#1888#1889#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#1958#1959#0" expanded="true" />
-            <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2032#2033#0" expanded="true" />
-            <element signature="e#2068#2069#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PictureMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/PictureServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/imagesloaded.pkgd.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/ContentServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="382">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1115,29 +1056,165 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/UserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        <state relative-caret-position="895">
+          <caret line="77" column="67" lean-forward="true" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#3000#3001#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/lightbox.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2964">
+          <caret line="192" column="37" selection-start-line="192" selection-start-column="37" selection-end-line="192" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/ajaxfileupload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="394" column="62" lean-forward="true" selection-start-line="394" selection-start-column="62" selection-end-line="394" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Picture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/entity/Album.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/setting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1013">
+          <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/uploadPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/checkForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1197" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/checkChangeInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3838">
+          <caret line="202" column="40" selection-start-line="202" selection-start-column="40" selection-end-line="202" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/CheckServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/controller/FormServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/PictureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/service/impl/PictureServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="42" column="54" lean-forward="true" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+          <folding>
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PictureMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ecjtu/zwh/mapper/PictureMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="24" column="64" lean-forward="true" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="42" column="57" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="950">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1876">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/userPageAjax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5529">
+          <caret line="291" column="81" selection-start-line="291" selection-start-column="81" selection-end-line="291" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,11 +1224,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>sharePicture:war</last-edited>
+          <last-edited>sharePicture:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1193,7 +1271,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|sharePicture</last-edited>
+          <last-edited>Web|sharePicture</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1205,6 +1283,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: com.alibaba:druid:1.1.19</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -30,6 +30,16 @@ public class PictureServiceImpl implements PictureService {
 
     @Override
     public List<Picture> getPictureByUserId(Integer userId) {
-        return null;
+        return pictureMapper.getPictureByUserId(userId);
+    }
+
+    @Override
+    public int uploadPic(Picture picture) {
+        return pictureMapper.uploadPic(picture);
+    }
+
+    @Override
+    public int deletePicByPicId(List<Integer> picIds) {
+        return pictureMapper.deletePicByPicId(picIds);
     }
 }

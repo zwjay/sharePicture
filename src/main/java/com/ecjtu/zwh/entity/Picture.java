@@ -6,13 +6,23 @@ public class Picture {
     private Integer picId;
     private String picDescription;
     private String picUrl;
-    private Integer uploadUserId;
     private Timestamp uploadTime;
     private String tags;
     private Integer typeId;
     private Integer userId;
 
     public Picture() {
+    }
+
+    public Picture(String picUrl, Integer userId) {
+        this.picUrl = picUrl;
+        this.userId = userId;
+    }
+
+    public Picture(String picUrl, Integer typeId, Integer userId) {
+        this.picUrl = picUrl;
+        this.typeId = typeId;
+        this.userId = userId;
     }
 
     public Picture(Integer picId, String picUrl, Integer typeId, Integer userId) {
@@ -22,19 +32,10 @@ public class Picture {
         this.userId = userId;
     }
 
-    public Picture(Integer picId, String picUrl, Integer uploadUserId, Integer typeId, Integer userId) {
-        this.picId = picId;
-        this.picUrl = picUrl;
-        this.uploadUserId = uploadUserId;
-        this.typeId = typeId;
-        this.userId = userId;
-    }
-
-    public Picture(Integer picId, String picDescription, String picUrl, Integer uploadUserId, Timestamp uploadTime, String tags, Integer typeId, Integer userId) {
+    public Picture(Integer picId, String picDescription, String picUrl, Timestamp uploadTime, String tags, Integer typeId, Integer userId) {
         this.picId = picId;
         this.picDescription = picDescription;
         this.picUrl = picUrl;
-        this.uploadUserId = uploadUserId;
         this.uploadTime = uploadTime;
         this.tags = tags;
         this.typeId = typeId;
@@ -63,14 +64,6 @@ public class Picture {
 
     public void setPicUrl(String picUrl) {
         this.picUrl = picUrl;
-    }
-
-    public Integer getUploadUserId() {
-        return uploadUserId;
-    }
-
-    public void setUploadUserId(Integer uploadUserId) {
-        this.uploadUserId = uploadUserId;
     }
 
     public Timestamp getUploadTime() {
@@ -111,7 +104,6 @@ public class Picture {
                 "picId=" + picId +
                 ", picDescription='" + picDescription + '\'' +
                 ", picUrl='" + picUrl + '\'' +
-                ", uploadUserId=" + uploadUserId +
                 ", uploadTime=" + uploadTime +
                 ", tags='" + tags + '\'' +
                 ", typeId=" + typeId +

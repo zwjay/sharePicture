@@ -16,4 +16,10 @@ public interface PictureService {
 
     // 通过 userId 查询该用户所有图片
     List<Picture> getPictureByUserId(Integer userId);
+
+    // 上传图片
+    int uploadPic(Picture picture);
+
+    // 通过 picId 删除图片
+    int deletePicByPicId(List<Integer> picIds);
 }

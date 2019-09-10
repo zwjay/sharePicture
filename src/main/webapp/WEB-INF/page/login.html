@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Free Responsive Html5 Templates">
 
-    <title>注册</title>
+    <title>登录</title>
 
     <!-- Bootstrap Core CSS -->
     <link th:href="@{/static/css/bootstrap.min.css}" rel="stylesheet" type="text/css">
@@ -43,22 +43,19 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" th:href="@{index}">
-                            <img src="/pic/images/logo.png" class="img-responsive">
+                            <img src="/pic/img_sharePic/logo.png" class="img-responsive">
                         </a>
                         <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
                     </div>
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a th:href="@{index}">Home</a></li>
-                            <li><a th:href="@{single}">About Us</a></li>
-                            <li><a th:href="@{archive}">Blog</a></li>
-                            <li><a th:href="@{contact}">Contact</a></li>
+                            <li><a th:href="@{index}"><span class="glyphicon glyphicon-home"></span> 首页</a></a></li>
                             <li th:if="${session.loginUser}==null" id="userBtn_li">
                                 <a class="btn btn-default active" href="login.html" th:href="@{login}" role="button">登录</a>
                                 <a class="btn btn-default" href="registered.html" th:href="@{registered}" role="button">注册</a>
                             </li>
                             <li th:if="${session.loginUser}!=null" id="userInfo_li">
-                                <a th:href="@{user/{userId}(userId=${session.loginUser.getUserId()})}" id="img"><img th:src="@{../pic/images/{getUserHeadUrl}(getUserHeadUrl=${session.loginUser.getUserHeadUrl()})}" class="img-responsive" alt=""></a>
+                                <a th:href="@{user/{userId}(userId=${session.loginUser.getUserId()})}" id="img"><img th:src="@{../pic/img_sharePic/userHead/{getUserHeadUrl}(getUserHeadUrl=${session.loginUser.getUserHeadUrl()})}" class="img-responsive" alt=""></a>
                                 <a th:href="@{user/{userId}(userId=${session.loginUser.getUserId()})}" id="userName"><span th:text="${session.loginUser.getUserName()}"></span></a>
                             </li>
                         </ul>

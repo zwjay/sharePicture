@@ -927,28 +927,74 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="234" parent="9" name="followers"/>
-    <table id="235" parent="9" name="picture"/>
-    <table id="236" parent="9" name="type"/>
-    <table id="237" parent="9" name="user"/>
-    <column id="238" parent="234" name="user_id">
+    <table id="234" parent="9" name="album"/>
+    <table id="235" parent="9" name="collection"/>
+    <table id="236" parent="9" name="follow"/>
+    <table id="237" parent="9" name="picture"/>
+    <table id="238" parent="9" name="type"/>
+    <table id="239" parent="9" name="user"/>
+    <column id="240" parent="234" name="pic_album_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="234" name="fans_id">
+    <column id="241" parent="234" name="pic_album_name">
       <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="234" name="create_time">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="234" name="upload_time">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <column id="244" parent="234" name="type_id">
+      <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="240" parent="234" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
+    <column id="245" parent="234" name="user_id">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="246" parent="234" name="type_id">
+      <ColNames>type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="247" parent="234" name="user_id">
       <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="248" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pic_album_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="241" parent="234" name="fk_followers_usr_userid">
+    <foreign-key id="249" parent="234" name="fk_album_type_typeid">
+      <ColNames>type_id</ColNames>
+      <RefSchemaName>share_picture</RefSchemaName>
+      <RefTableName>type</RefTableName>
+      <RefColNames>type_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="250" parent="234" name="fk_album_user_userid">
       <ColNames>user_id</ColNames>
       <RefSchemaName>share_picture</RefSchemaName>
       <RefTableName>user</RefTableName>
@@ -956,138 +1002,239 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="242" parent="235" name="pic_id">
+    <column id="251" parent="235" name="collection_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="235" name="pic_description">
+    <column id="252" parent="235" name="pic_album_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="235" name="pic_id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="235" name="collection_time">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="235" name="user_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="256" parent="235" name="pic_album_id">
+      <ColNames>pic_album_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="257" parent="235" name="pic_id">
+      <ColNames>pic_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="258" parent="235" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="259" parent="235" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>collection_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="260" parent="235" name="fk_collection_album_picalbumid">
+      <ColNames>pic_album_id</ColNames>
+      <RefSchemaName>share_picture</RefSchemaName>
+      <RefTableName>album</RefTableName>
+      <RefColNames>pic_album_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="261" parent="235" name="fk_collection_picture_picid">
+      <ColNames>pic_id</ColNames>
+      <RefSchemaName>share_picture</RefSchemaName>
+      <RefTableName>picture</RefTableName>
+      <RefColNames>pic_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="262" parent="235" name="fk_collection_user_userid">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>share_picture</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="263" parent="236" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="236" name="fans_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="265" parent="236" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="266" parent="236" name="fk_followers_usr_userid">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>share_picture</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="267" parent="237" name="pic_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="237" name="pic_description">
       <Position>2</Position>
       <DataType>varchar(150)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="235" name="pic_url">
+    <column id="269" parent="237" name="pic_url">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="235" name="upload_user_id">
+    <column id="270" parent="237" name="upload_time">
       <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="246" parent="235" name="upload_time">
-      <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="235" name="tags">
-      <Position>6</Position>
+    <column id="271" parent="237" name="tags">
+      <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="235" name="type_id">
+    <column id="272" parent="237" name="type_id">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="237" name="user_id">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="235" name="user_id">
-      <Position>8</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="250" parent="235" name="type_id">
+    <index id="274" parent="237" name="type_id">
       <ColNames>type_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="251" parent="235" name="user_id">
+    <index id="275" parent="237" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="252" parent="235" name="PRIMARY">
+    <key id="276" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pic_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="253" parent="235" name="fk_picture_type_typeid">
+    <foreign-key id="277" parent="237" name="fk_picture_type_typeid">
       <ColNames>type_id</ColNames>
       <RefSchemaName>share_picture</RefSchemaName>
       <RefTableName>type</RefTableName>
       <RefColNames>type_id</RefColNames>
     </foreign-key>
-    <foreign-key id="254" parent="235" name="fk_picture_user_userid">
+    <foreign-key id="278" parent="237" name="fk_picture_user_userid">
       <ColNames>user_id</ColNames>
       <RefSchemaName>share_picture</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <column id="255" parent="236" name="type_id">
+    <column id="279" parent="238" name="type_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="236" name="type_name">
+    <column id="280" parent="238" name="type_name">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="257" parent="236" name="PRIMARY">
+    <index id="281" parent="238" name="type_name">
+      <ColNames>type_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="282" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>type_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="258" parent="237" name="user_id">
+    <key id="283" parent="238" name="type_name">
+      <ColNames>type_name</ColNames>
+      <UnderlyingIndexName>type_name</UnderlyingIndexName>
+    </key>
+    <column id="284" parent="239" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="237" name="user_name">
+    <column id="285" parent="239" name="user_name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="237" name="password">
+    <column id="286" parent="239" name="password">
       <Position>3</Position>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="237" name="email">
+    <column id="287" parent="239" name="email">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="237" name="user_head_url">
+    <column id="288" parent="239" name="user_head_url">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>&apos;default.png&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="263" parent="237" name="user_name">
+    <index id="289" parent="239" name="user_name">
       <ColNames>user_name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="264" parent="237" name="PRIMARY">
+    <key id="290" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="265" parent="237" name="user_name">
+    <key id="291" parent="239" name="user_name">
       <ColNames>user_name</ColNames>
       <UnderlyingIndexName>user_name</UnderlyingIndexName>
     </key>

@@ -5,6 +5,7 @@
 
     // Initialize all functions when the document is ready.
 	$(document).ready(function(){
+
 		initResize();
 		initScroller();
 		initAnimation();
@@ -74,14 +75,13 @@
 		});
 		// filter functions
 		var filterFns = {};
-		
+
 		// bind filter button click
 		$('.isotopeFilters').on( 'click', 'button', function() {
 		  var filterValue = $( this ).attr('data-filter');
 		  // use filterFn if matches value
 		  filterValue = filterFns[ filterValue ] || filterValue;
 		  $isotopeContainer.isotope({ filter: filterValue });
-		  
 		  updateFilterCounts();
 		});
 		function updateFilterCounts() {

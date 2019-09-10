@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecjtu.zwh.mapper.FollowMapper">
+
+    <!-- int getFansNumByUserId(Integer userId) -->
+    <select id="getFansNumByUserId" resultType="int">
+        select count(*) from follow where user_id=#{userId}
+    </select>
+
+    <!-- int getFollowerNumByFansId(Integer fansId) -->
+    <select id="getFollowerNumByFansId" resultType="int">
+        select count(*) from follow where fans_id=#{fansId}
+    </select>
+
+    <!-- List<Follow> getAllFansByUserId(Integer userId) -->
+    <select id="getAllFansByUserId" resultType="com.ecjtu.zwh.entity.Follow">
+        select * from follow where user_id=#{userId}
+    </select>
+
+    <!-- List<Follow> getAllUserByFansId(Integer fansId) -->
+    <select id="getAllUserByFansId" resultType="com.ecjtu.zwh.entity.Follow">
+        select * from follow where fans_id=#{fansId}
+    </select>
+
+    <!-- Follow isFansFollowUser(Integer fansId, Integer userId) -->
+    <select id="isFansFollowUser" resultType="com.ecjtu.zwh.entity.Follow">
+        select * from follow where fans_id=#{fansId} and user_id=#{userId}
+    </select>
+
+    <!-- int saveFollow(Follow follow) -->
+    <insert id="saveFollow" parameterType="com.ecjtu.zwh.entity.Follow">
+        insert into follow (user_id, fans_id) values (#{userId}, #{fansId})
+    </insert>
+
+    <!-- int deleteFollow(Follow follow) -->
+    <delete id="deleteFollow" parameterType="com.ecjtu.zwh.entity.Follow">
+        delete from follow where user_id=#{userId} and fans_id=#{fansId}
+    </delete>
+
+</mapper>

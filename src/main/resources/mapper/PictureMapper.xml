@@ -24,4 +24,17 @@
         select * from picture where user_id=#{userId}
     </select>
 
+    <!-- int uploadPic(Picture picture) -->
+    <insert id="uploadPic" parameterType="com.ecjtu.zwh.entity.Picture">
+        insert into picture (pic_url, type_id, user_id) values (#{picUrl}, #{typeId}, #{userId})
+    </insert>
+
+    <!-- int deletePicByPicId(List<Integer> picIds) -->
+    <delete id="deletePicByPicId" parameterType="java.lang.Integer">
+        delete from picture
+        <foreach collection="picIds" item="picId" open="where pic_id in (" separator="," close=")">
+            #{picId}
+        </foreach>
+    </delete>
+
 </mapper>
