@@ -17,7 +17,12 @@ $(document).on("click", "#user_picture_btn", function () {
         success: function (result) {
             if (result.code == 100) {
                 var userPics = result.extend.model.userPics;
-                var userPicBox = "<h4 id='picPart_head'>我的图片：</h4>";
+                var userPicBox = "";
+                if (userId == sessionId) {
+                    userPicBox = "<h4 id='picPart_head'>我的图片：</h4>";
+                } else {
+                    userPicBox = "<h4 id='picPart_head'>他的图片：</h4>";
+                }
                 if (userId == sessionId) {    // 只要当前页面为自己页面时，才拼接编辑按钮
                     userPicBox += "<a class=\"btn btn-default edit_btn edit_btn_close\"><span class=\"glyphicon glyphicon-remove\"></span> 取消</a>\n" +
                         "<a class=\"btn btn-default edit_btn edit_btn_delete\"><span class=\"glyphicon glyphicon-trash\"></span> 删除</a>\n" +
@@ -206,6 +211,7 @@ $("#checkIsFollow").click(function () {
 // 点击关注部分，发送 Ajax，获得关注列表
 $("#user_follow_div").click(function () {
     var userId = $("#get_user_id").text();
+    var sessionId = $("#get_session_id").text();
 
     $.ajax({
         type: "post",
@@ -213,12 +219,18 @@ $("#user_follow_div").click(function () {
         success: function (result) {
             if (result.code == 100) {
                 var followers = result.extend.model.followers;
-                var followingBox = "<h4>我的关注：</h4>\n";
+                var followingBox = "";
+                if (userId == sessionId) {
+                    followingBox = "<h4>我的关注：</h4>\n";
+                } else {
+                    followingBox = "<h4>他的关注：</h4>\n";
+                }
                 $.each(followers, function (index, follower) {
                     followingBox +=
                         "<div class=\"col-md-4\">\n" +
-                        "    <div class=\"col-md-8 col-md-offset-2\">\n" +
-                        "        <img src=\"../../pic/img_sharePic/userHead/"+ follower.userHeadUrl +"\" class=\"img-responsive img-circle center-block\" alt=\"\">\n" +
+                        "<div class=\"col-md-10 col-md-offset-1 follow_box_div\">" +
+                        "    <div class=\"col-md-12\">\n" +
+                        "        <img src=\"../../pic/img_sharePic/userHead/"+ follower.userHeadUrl +"\" class=\"img-responsive img-circle center-block\" alt=\"\" style=\"width: 200px;\">\n" +
                         "    </div>\n" +
                         "    <div class=\"col-md-12 text-center othUserName\">\n" +
                         "        <a href=\"../user/"+ follower.userId +"\"><span>"+ follower.userName +"</span></a>\n" +
@@ -227,6 +239,7 @@ $("#user_follow_div").click(function () {
                         "        <a class=\"btn btn-default checkIsFollow-fl follower"+ follower.userId +"\"><span class=\"glyphicon glyphicon-plus\"></span> 关注</a>\n" +
                         "        <span class=\"hidden get_user_id_fl\">"+ follower.userId +"</span>\n" +
                         "    </div>\n" +
+                        "</div>" +
                         "</div>";
                 });
                 $("#user-right-box").html(followingBox);
@@ -239,6 +252,7 @@ $("#user_follow_div").click(function () {
 // 点击粉丝部分，发送 Ajax，获得粉丝列表
 $("#user_fans_div").click(function () {
     var userId = $("#get_user_id").text();
+    var sessionId = $("#get_session_id").text();
 
     $.ajax({
         type: "post",
@@ -246,12 +260,18 @@ $("#user_fans_div").click(function () {
         success: function (result) {
             if (result.code == 100) {
                 var fans = result.extend.model.fans;
-                var fansBox = "<h4>我的粉丝：</h4>\n";
+                var fansBox = "";
+                if (userId == sessionId) {
+                    fansBox = "<h4>我的粉丝：</h4>\n";
+                } else {
+                    fansBox = "<h4>他的粉丝：</h4>\n";
+                }
                 $.each(fans, function (index, fan) {
                     fansBox +=
                         "<div class=\"col-md-4\">\n" +
-                        "    <div class=\"col-md-8 col-md-offset-2\">\n" +
-                        "        <img src=\"../../pic/img_sharePic/userHead/"+ fan.userHeadUrl +"\" class=\"img-responsive img-circle center-block\" alt=\"\">\n" +
+                        "<div class=\"col-md-10 col-md-offset-1 follow_box_div\">" +
+                        "    <div class=\"col-md-12\">\n" +
+                        "        <img src=\"../../pic/img_sharePic/userHead/"+ fan.userHeadUrl +"\" class=\"img-responsive img-circle center-block\" alt=\"\" style=\"width: 200px;\">\n" +
                         "    </div>\n" +
                         "    <div class=\"col-md-12 text-center othUserName\">\n" +
                         "        <a href=\"../user/"+ fan.userId +"\"><span>"+ fan.userName +"</span></a>\n" +
@@ -260,6 +280,7 @@ $("#user_fans_div").click(function () {
                         "        <a class=\"btn btn-default checkIsFollow-fs fans"+ fan.userId +"\"><span class=\"glyphicon glyphicon-plus\"></span> 关注</a>\n" +
                         "        <span class=\"hidden\">"+ fan.userId +"</span>\n" +
                         "    </div>\n" +
+                        "</div>" +
                         "</div>";
                 });
                 $("#user-right-box").html(fansBox);
@@ -289,7 +310,7 @@ function checkIsFollow_fl(followers) {
                     var isFollowMap = result.extend.isFollowMap;
                     $.each(isFollowMap, function (userId, isFollow) {
                         if (sessionId === userId) {
-                            $(".follower" + userId).attr("visibility", "hidden");
+                            $(".follower" + userId).css("visibility", "hidden");
                         }
                         if (isFollow === "true") {
                             $(".follower" + userId).html("已关注 <span class=\"glyphicon glyphicon-ok\"></span>").addClass("active");
@@ -321,7 +342,7 @@ function checkIsFollow_fs(followers) {
                     var isFollowMap = result.extend.isFollowMap;
                     $.each(isFollowMap, function (userId, isFollow) {
                         if (sessionId === userId) {
-                            $(".fans" + userId).addClass("hidden");
+                            $(".fans" + userId).css("visibility", "hidden");
                         }
                         if (isFollow === "true") {
                             $(".fans" + userId).html("已关注<span class=\"glyphicon glyphicon-ok\"></span>").addClass("active");

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
@@ -63,6 +64,11 @@ public class FormServlet {
     @ResponseBody
     public Msg deletePics(Integer[] checkIds) {
         List<Integer> picIds = new ArrayList<>(Arrays.asList(checkIds));
+        for (Integer picId :
+                picIds) {
+            String picUrl = pictureService.getPictureByPicId(picId).getPicUrl();
+            new File("G:/upload/img_sharePic/img/"+picUrl).delete();
+        }
         if (pictureService.deletePicByPicId(picIds) > 0) {
             return Msg.success();
         } else {
@@ -90,6 +96,13 @@ public class FormServlet {
             String picName = UUID.randomUUID().toString();
             String fileName = file.getOriginalFilename();
             String extName = fileName.substring(fileName.lastIndexOf("."));
+            String userHeadUrl = user.getUserHeadUrl();
+            // 默认头像图片不删除
+            if (!userHeadUrl.equals("default.png")) {
+                // 删除旧头像
+                new File("G:/upload/img_sharePic/userHead/"+userHeadUrl).delete();
+            }
+            // 上传新头像
             file.transferTo(new File("G:/upload/img_sharePic/userHead/"+picName+extName));
             user.setUserHeadUrl(picName + extName);
             if (userService.updateUser(user) > 0) {

@@ -67,7 +67,7 @@
 
 	function initIsotope () {
 		var initial_items = 8;
-		var next_items = 5;
+		var next_items = 8;
 		// init Isotope
 		var $isotopeContainer = $('.isotopeContainer').isotope({
 		  itemSelector: '.isotopeSelector',

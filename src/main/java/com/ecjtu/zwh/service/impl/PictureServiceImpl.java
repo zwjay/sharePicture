@@ -20,7 +20,7 @@ public class PictureServiceImpl implements PictureService {
 
     @Override
     public Picture getPictureByPicId(Integer picId) {
-        return null;
+        return pictureMapper.getPictureByPicId(picId);
     }
 
     @Override

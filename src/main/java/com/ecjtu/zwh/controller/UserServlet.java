@@ -35,17 +35,20 @@ public class UserServlet {
     @RequestMapping("/{userId}")
     public String userSpace(@PathVariable Integer userId, Model model) {
         User user = userService.getUserById(userId);
+        if (user == null) {
+            return "404";
+        } else {
+            List<Type> types = typeService.getAllType();
 
-        List<Type> types = typeService.getAllType();
+            int followers = followService.getFollowerNumByFansId(userId);
+            int fans = followService.getFansNumByUserId(userId);
+            FollowerVO follower = new FollowerVO(followers, fans);
 
-        int followers = followService.getFollowerNumByFansId(userId);
-        int fans = followService.getFansNumByUserId(userId);
-        FollowerVO follower = new FollowerVO(followers, fans);
-
-        model.addAttribute("user", user);
-        model.addAttribute("types", types);
-        model.addAttribute("follower", follower);
-        return "user";
+            model.addAttribute("user", user);
+            model.addAttribute("types", types);
+            model.addAttribute("follower", follower);
+            return "user";
+        }
     }
 
     @RequestMapping("/{userId}/setting")
